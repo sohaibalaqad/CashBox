@@ -1,0 +1,185 @@
+/***********************
+	blogs 
+*********************/
+.site-section {
+    padding: 5em  0  3em 0;
+}
+.section-sub-title{
+	font-size: 13px;
+    color: #adb5bd;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+	font-weight: 700;
+	font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	text-align: center!important;
+}
+h2{
+	line-height: 0;
+}
+.section-title {
+    color: #33333b;
+    font-size: 40px;
+	font-weight: 600;
+	font-family: 'Poppins' sans-serif;
+	line-height: 1.2;
+}
+
+.text-black {
+	color: #000 !important;
+	font-size: 20px;
+    font-weight: 400;
+	line-height: 1.5;
+}
+.h-entry img{
+	margin-bottom: 30px;
+}
+.more{
+
+	color: #53d9fa;
+	
+}
+/*********************************
+10. Newsletter
+*********************************/
+
+.newsletter
+{
+	width: 100%;
+	background: #51545f;
+	margin-top: 81px;
+}
+.newsletter_text
+{
+	height: 120px;
+}
+.newsletter_text h4
+{
+	color: #f2f2f2;
+	margin-bottom: 0px;
+	line-height: 24px;
+}
+.newsletter_text p
+{
+	margin-bottom: 0px;
+	line-height: 1.7;
+	color: #989898;
+}
+.newsletter_form
+{
+	height: 120px;
+}
+#newsletter_email
+{
+	width: 300px;
+	height: 46px;
+	background: #FFFFFF;
+	border: none;
+    padding-left: 20px;
+    border-radius: 5px;
+    margin-right: 3px;
+}
+
+:focus
+{
+	outline: none !important;
+}
+ 
+.newsletter_submit_btn
+{
+	width: 160px;
+	height: 46px;
+    border: none;
+    border-radius: 5px;
+	background: #67e1ff;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.newsletter_submit_btn:hover
+{
+	background: #53d9fa;
+}
+
+/*********************************
+11. Footer
+*********************************/
+.footer_color{
+	background-color: #FFFFFF;
+	font-size: 20px;
+}
+.footer_nav_container
+{
+	height: 130px;
+}
+.cr
+{
+	margin-right: 48px;
+}
+.footer_nav li
+{
+	display: inline-block;
+	margin-right: 45px;
+}
+
+.footer_nav li a, .cr
+{
+	font-size: 14px;
+	color: #51545f;
+	line-height: 30px;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+.footer_nav li a:hover, .cr a, .cr i
+{
+	color: #67e1ff;
+}
+.footer_social
+{
+	height: 130px;
+}
+.footer_social ul li
+{
+	display: inline-block;
+	margin-right: 10px;
+}
+.footer_social ul li:last-child
+{
+	margin-right: 0px;
+}
+.footer_social ul li a
+{
+	color: #51545f;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+	padding: 10px;
+}
+.footer_social ul li:last-child a
+{
+	padding-right: 0px;
+}
+.footer_social ul li a:hover
+{
+	color: #67e1ff;
+}
+
+.cards img {
+	margin: 0 2px;
+}
+
+.bg-color{
+	background-color: #33333b;
+}
+
+.info-footer{
+
+	font-size: 20px;
+	padding:  7px 15px;
+}

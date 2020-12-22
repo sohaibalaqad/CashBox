@@ -1,0 +1,174 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ControlPanel.master.cs" Inherits="Project.Control_Panel.ControlPanel" %>
+
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head runat="server">
+    <title></title>
+    <meta charset="utf-8">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0ad1a6e261.js" crossorigin="anonymous"></script>
+    <style type="text/css">
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #c2f0c2;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+                background: #2eb82e;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Tajawal;
+        }
+
+        .auto-style1 {
+            width: 100%;
+        }
+
+        .Rectangle-10 {
+            width: 350px;
+            height: 100%;
+            margin: 0 0 0 74px;
+            background-color: #4caf50;
+        }
+
+        .Ellipse-4 {
+            width: 150px;
+            height: 150px;
+            margin: auto;
+            border: none;
+            border-radius: 50%;
+            position: absolute;
+            top: 50px;
+            right: 50px;
+        }
+
+        .auto-style2 {
+            width: 18vw;
+            height: 750px;
+            margin: 0 0 0 74px;
+            background-color: #4caf50;
+            height: 100vh;
+            position: fixed;
+        }
+
+        .nav {
+            position: relative;
+            height: 100px;
+            width: 100%;
+            /*  background-color:aqua;*/
+        }
+
+        .logo {
+            position: absolute;
+            right: 45%;
+            top: 15%;
+            width: 300px;
+            height: 84px;
+        }
+
+        .logout_but {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            left: 5%;
+            top: 30%;
+        }
+
+        .HiUser {
+            margin: auto;
+            border: none;
+            position: absolute;
+            top: 220px;
+            right: 60px;
+            font-family: Tajawal;
+            font-size: 25px;
+        }
+
+        .list-group-item {
+            background-color: #4caf50;
+        }
+
+        .auto-style3 {
+            color: #000000;
+        }
+        .auto-style4 {
+            text-decoration: none;
+        }
+        .fas{
+            color:black;
+            margin-left : 15px
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style2" rowspan="2">
+                    <asp:Image ID="Image2" runat="server"  CssClass="Ellipse-4" />
+                    <div class="HiUser">
+                       
+                        <asp:Label ID="Label1" runat="server" Text="user"></asp:Label>
+                    </div>
+                    <%-- multiview --%>
+                    <asp:MultiView ID="MultiView1" runat="server">
+                        <asp:View ID="ViewAdmin" runat="server">
+                            
+                            <ul class="list-group list-group-flush" style="padding: 0 25px; margin-top: 300px; font-family: Tajawal; font-size: 20px;">
+                                <li class="list-group-item"><a class="text-decoration-none" href="ControlPanelAdmin.aspx"><i class="fas fa-tachometer-alt"></i><span class="auto-style3">لوحة التحكم</span></a></li>
+                                <li class="list-group-item"><a class="text-decoration-none" href="AdminDeposit.aspx"><i class="fas fa-sign-in-alt"></i><span class="auto-style3">الإيداعات</span></a></li>
+                                <li class="list-group-item"><a class="text-decoration-none" href="AdminWithdraw.aspx"><i class="fas fa-sign-out-alt"></i><span class="auto-style3">السحوبات</span></a></li>
+                                <li class="list-group-item"><a class="text-decoration-none" href="AdminOutlay.aspx"><i class="fas fa-wallet"></i><span class="auto-style3">المصاريف</span></a></li>
+                                <li class="list-group-item"><a class="auto-style4" href="Users.aspx"><i class="fas fa-users"></i><span class="auto-style3">الأعضاء</span></a></li>
+                            </ul>
+                        </asp:View>
+                        <asp:View ID="ViewUser" runat="server">
+                           <ul class="list-group list-group-flush" style="padding: 0 25px; margin-top: 300px; font-family: Tajawal; font-size: 20px;">
+                                <li class="list-group-item"><a class="text-decoration-none" href="ControlPanelUser.aspx"><i class="fas fa-home"></i><span class="auto-style3">الرئيسية</span></a></li>
+                                <li class="list-group-item"><a class="text-decoration-none" href="UserDeposit.aspx"><i class="fas fa-sign-in-alt"></i><span class="auto-style3">الإيداعات</span></a></li>
+                                <li class="list-group-item"><a class="text-decoration-none" href="UserWithdraw.aspx"><i class="fas fa-sign-out-alt"></i><span class="auto-style3">السحوبات</span></a></li>
+                                
+                            </ul>
+                        </asp:View>
+
+                    </asp:MultiView>
+                </td>
+                <td class="nav">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/images/cash box-01.png" CssClass="logo" />
+                    <%--<i class="fas fa-cog"></i>--%>
+                    <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/logout.png" CssClass="logout_but" OnClick="ImageButton1_Click" />
+                </td>
+            </tr>
+            <tr>
+                <td style="right: 260px; position: absolute; width: 80vw; ">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                </td>
+            </tr>
+        </table>
+
+    </form>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+</body>
+</html>
